@@ -41,7 +41,7 @@ inline uint32_t bswap32(uint32_t x) {
 // 国家标准 GM/T 0004-2012 规定的正确初始状态 IV 常量
 static const uint32_t SM3_IV[8] = {
     0x7380166F, 0x4914B2B9, 0x172442D7, 0xDA8A0600,
-    0xA96F30BC, 0x163138AA, 0xE38DEE4D, 0xB0FB0E4E  // 修正了 G 和 H 的常量值
+    0xA96F30BC, 0x163138AA, 0xE38DEE4D, 0xB0FB0E4E
 };
 
 // ===================================================================
