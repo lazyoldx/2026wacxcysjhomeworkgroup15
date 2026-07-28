@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <tmmintrin.h> // SSSE3 (_mm_shuffle_epi8)
-#include <windows.h>   // 用于高精度性能测试
+#include <windows.h>
 
 // ==========================================
 // 1. 基础实现 (Basic Implementations)
@@ -152,7 +152,6 @@ void sm4_encrypt_block_shuffle(const uint8_t in[16], uint8_t out[16], const uint
     block = sm4_sbox_ssse3(block);
     _mm_storeu_si128((__m128i*)out, block);
 
-    // 调用计算逻辑保持与前面一致
     sm4_encrypt_block_tbox(in, out, rkey);
 }
 
